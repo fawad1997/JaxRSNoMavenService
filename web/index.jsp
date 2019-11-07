@@ -1,19 +1,11 @@
 <%@ page import="javax.ws.rs.core.Response" %>
-<%@ page import="org.jboss.resteasy.client.jaxrs.ResteasyClient" %>
-<%@ page import="org.jboss.resteasy.client.jaxrs.ResteasyWebTarget" %>
-<%@ page import="org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder" %>
+<%@ page import="org.jboss.resteasy.client.jaxrs.*" %>
 <%@ page import="org.json.JSONObject" %>
-<%@ page import="org.json.JSONArray" %><%--
-  Created by IntelliJ IDEA.
-  User: Fawad
-  Date: 07/11/2019
-  Time: 8:04 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="org.json.JSONArray" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>RestEasy Example</title>
   </head>
   <body>
     <h1>Hello World</h1>
