@@ -11,18 +11,15 @@
     <h1>Hello World</h1>
     <%
       ResteasyClient client = new ResteasyClientBuilder().build();
-      ResteasyWebTarget getDummy = client.target("http://localhost:8080/JaxRSNoMavenService_war_exploded/api/library/books");
+      ResteasyWebTarget getDummy = client.target("http://localhost:8080/JaxRSNoMavenService_war_exploded/api/mathservice/cube/3");
 
       Response getDummyResponse = getDummy.request().get();
       String value = getDummyResponse.readEntity(String.class);
 
       out.println(value); //prints JSON Object Value
 
-      JSONArray jsonArray = new JSONArray(value);
-      for(int i=0;i<jsonArray.length();i++){
-        JSONObject jsonObject = jsonArray.getJSONObject(i);
-        out.println(jsonObject.get("title"));
-      }
+      JSONObject jsonObject = new JSONObject(value);
+      out.println(jsonObject.get("result")); //prints the end result
 
       getDummyResponse.close();
     %>
